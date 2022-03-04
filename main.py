@@ -20,14 +20,14 @@ def extract_text_from_image(file_name: str) -> str:
     # Opening file as image
     image = Image.open(input_file)
 
-    # Using tesseract library to extract text from image
+    # Using tes``seract library to extract text from image
     return pytesseract.image_to_string(image)
 
 
 def save_text_to_doc(file_name: str, text: str) -> None:
     """Writes string to docx document."""
 
-    # Example: input file named sample.PNG will be named as sample.docx
+    # Example: input file named screenshot.PNG will be named as sample.docx
     output_file = f"{PATH_OUTPUT_DOCS}\\{file_name.split('.')[0]}.docx"
 
     document = Document()
